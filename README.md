@@ -1,68 +1,55 @@
-# Puppet
+Puppet
+======
 
-![RSpec tests](https://github.com/puppetlabs/puppet/workflows/RSpec%20tests/badge.svg)
-[![Gem Version](https://badge.fury.io/rb/puppet.svg)](https://badge.fury.io/rb/puppet)
-[![Inline docs](https://inch-ci.org/github/puppetlabs/puppet.svg)](https://inch-ci.org/github/puppetlabs/puppet)
+[![License](https://img.shields.io/github/license/puppetlabs/puppet.svg)](https://github.com/puppetlabs/puppet/blob/main/LICENSE)
+[![Test](https://github.com/puppetlabs/puppet/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/puppetlabs/puppet/actions/workflows/test.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/puppetlabs/puppet/branch/main/graph/badge.svg?token=UaJlKJuGya)](https://codecov.io/gh/puppetlabs/puppet/branch/main)
 
-Puppet, an automated administrative engine for your Linux, Unix, and Windows systems, performs
-administrative tasks (such as adding users, installing packages, and updating server
-configurations) based on a centralized specification.
+Puppet, an automated administrative engine for your Linux, Unix, and Windows systems, performs administrative tasks
+(such as adding users, installing packages, and updating server configurations) based on a centralized specification.
 
-## Documentation
+Documentation
+-------------
 
 Documentation for Puppet and related projects can be found online at the
-[Puppet Docs site](https://puppet.com/docs).
+[Puppet Docs Site](https://puppet.com/docs/puppet/latest/puppet_index.html).
 
-### HTTP API
+Puppet manual
+-------------
 
-[HTTP API Index](https://puppet.com/docs/puppet/latest/http_api/http_api_index.html)
+The official Puppet manual is available online [here](https://puppet.com/docs/puppet/latest/puppet_index.html).
 
-## Installation
+Installation
+------------
 
-The best way to run Puppet is with [Puppet Enterprise (PE)](https://puppet.com/products/puppet-enterprise/),
-which also includes orchestration features, a web console, and professional support.
-The PE documentation is [available here.](https://puppet.com/docs/pe/latest)
+The Puppet agent and server packages can be installed in a variety of ways:
 
-To install an open source release of Puppet,
-[see the installation guide on the docs site.](https://puppet.com/docs/puppet/latest/installing_and_upgrading.html)
+* On Linux, using [puppet-agent](https://puppet.com/docs/puppet/latest/install_agents.html) packages
+* On Windows, using [msi packages](https://puppet.com/docs/puppet/latest/install_windows.html)
+* On macOS, using [pkg packages](https://puppet.com/docs/puppet/latest/install_osx.html)
 
-If you need to run Puppet from source as a tester or developer,
-see the [Quick Start to Developing on Puppet](docs/quickstart.md) guide.
+Source Installation
+-------------------
 
-## Developing and Contributing
+Puppet can be installed via RubyGems:
 
-We'd love to get contributions from you! For a quick guide to getting your
-system setup for developing, take a look at our [Quickstart
-Guide](https://github.com/puppetlabs/puppet/blob/main/docs/quickstart.md). Once you are up and running, take a look at the
-[Contribution Documents](https://github.com/puppetlabs/.github/blob/main/CONTRIBUTING.md) to see how to get your changes merged
-in.
+    gem install puppet
 
-For more complete docs on developing with Puppet, take a look at the
-rest of the [developer documents](https://github.com/puppetlabs/puppet/blob/main/docs/index.md).
+Or via source:
 
-## Licensing
+    git clone https://github.com/puppetlabs/puppet.git
+    cd puppet
+    bundle install
+    bundle exec rake install
 
-See [LICENSE](https://github.com/puppetlabs/puppet/blob/main/LICENSE) file. Puppet is licensed by Puppet, Inc. under the Apache license. Puppet, Inc. can be contacted at: info@puppet.com
+Contributing & License
+----------------------
 
-## Support
+Puppet is licensed under the [Apache 2 license](https://github.com/puppetlabs/puppet/blob/main/LICENSE).
+Check out the [contributing guide](https://github.com/puppetlabs/puppet/blob/main/CONTRIBUTING.md) to get started.
 
-Please log issues in this project's [GitHub Issues](https://github.com/puppetlabs/puppet/issues). A [mailing
-list](https://groups.google.com/forum/?fromgroups#!forum/puppet-users) is
-available for asking questions and getting help from others, or if you prefer chat, we also have a [Puppet Community slack.](https://puppetcommunity.slack.com/)
+Related Projects
+----------------
 
-We use semantic version numbers for our releases and recommend that users stay
-as up-to-date as possible by upgrading to patch releases and minor releases as
-they become available.
-
-Bug fixes and ongoing development will occur in minor releases for the current
-major version. Security fixes will be backported to a previous major version on
-a best-effort basis, until the previous major version is no longer maintained.
-
-For example: If a security vulnerability is discovered in Puppet 8.1.1, we
-would fix it in the 8 series, most likely as 8.1.2. Maintainers would then make
-a best effort to backport that fix onto the latest Puppet 7 release.
-
-Long-term support, including security patches and bug fixes, is available for
-commercial customers. Please see the following page for more details:
-
-[Puppet Enterprise Support Lifecycle](https://puppet.com/docs/puppet-enterprise/product-support-lifecycle/)
+1. related project [ansible](https://github.com/ansible/ansible)
+2. related project [salt](https://github.com/saltstack/salt)
